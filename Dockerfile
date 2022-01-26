@@ -1,13 +1,12 @@
-FROM node:14-alpine AS development
-ENV NODE_ENV development
-# Add a work directory
+
+FROM node:13.12.0-alpine
+
 WORKDIR /app
-# Cache and Install dependencies
-COPY package.json .
+
+ENV PATH /app/node_modules/.bin:$PATH
+
+COPY ./ ./
+
 RUN npm install
-# Copy app files
-COPY . .
-# Expose port
-EXPOSE 3000
-# Start the app
-CMD [ "npm", "start" ]
+
+CMD ["npm", "start"]
