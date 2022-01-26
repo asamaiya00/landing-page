@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -55,3 +57,27 @@ button {
 .deploy-now:hover {
   background: none;
 }
+
+.slider {
+  display: flex;
+  align-items: center;
+  margin: 30px 20px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.slider-image {
+  width: 60%;
+}
+
+.slider-content {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
